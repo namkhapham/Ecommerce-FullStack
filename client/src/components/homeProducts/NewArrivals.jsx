@@ -5,7 +5,7 @@ import PreviousArrow from "../PreviousArrow";
 import Title from "../ui/title";
 import ProductCard from "../ProductCard";
 import { getData } from "../../helpers";
-import { config } from "../../../config";
+import { serverUrl } from "../../../config";
 
 const SanPhamMoi = () => {
   const settings = {
@@ -45,7 +45,7 @@ const SanPhamMoi = () => {
 
   const [sanPham, setSanPham] = useState([]);
   const [dangTai, setDangTai] = useState(true);
-  const endpoint = `${config?.baseUrl}/api/products?_type=new_arrivals`;
+  const endpoint = `${serverUrl}/api/products?_type=new_arrivals`;
 
   useEffect(() => {
     const laySanPham = async () => {
